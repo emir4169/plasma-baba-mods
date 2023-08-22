@@ -90,9 +90,6 @@ end
 ]]
 local old_inside = inside
 function inside(name,...)
-    if not GLOBAL_disable_guard_checking and is_name_guarded(name) then
-		return
-	end
     return old_inside(name, ...)
 end
 
